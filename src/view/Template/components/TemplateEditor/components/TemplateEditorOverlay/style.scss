@@ -1,0 +1,48 @@
+.template-overlay {
+  padding: 52px 84px;
+  height: 100%;
+  font-size: 0.8125em;
+  &-skeleton {
+    border: 2px white dashed;
+    height: 100%;
+    border-radius: 10px;
+    &-item {
+      &__video {
+        border-right: 2px dashed white;
+        .film {
+          width: 52px;
+          height: 52px;
+        }
+      }
+      &__images {
+        &--first {
+          border-bottom: 2px dashed white;
+          height: 45%;
+        }
+        &--last {
+          height: 55%;
+        }
+      }
+      &-box {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        span {
+          display: inline-block;
+          margin-top: 13px;
+        }
+      }
+    }
+  }
+}
+.w-50 {
+  width: 50%;
+}
+.remove-padding-col {
+  padding: 0 !important;
+}
+.template-font-image {
+  font-size: 52px;
+}

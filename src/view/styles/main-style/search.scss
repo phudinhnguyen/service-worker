@@ -1,0 +1,74 @@
+@use "variable";
+
+.form-search {
+  border: 2px solid $color-border-search;
+  background: transparent;
+  height: 40px;
+  border-radius: 40px;
+  padding: 0 20px;
+  width: 100%;
+  &:focus {
+    box-shadow: 1px 1px 1px rgb(0, 0, 1);
+    outline: none;
+    border-radius: 40px;
+  }
+}
+.icon-search {
+  font-size: 1.2rem;
+  margin-left: -38px;
+  i {
+    color: $color__yellow;
+  }
+}
+
+.ant-input-search.ant-form-search .ant-input:hover,
+.ant-input-search.ant-form-search .ant-input:focus {
+  border-color: $color__yellow !important;
+}
+.ant-input-search.ant-form-search .ant-input:hover + .ant-input-group-addon .ant-input-search-button:not(.ant-btn-primary), .ant-input-search .ant-input:focus + .ant-input-group-addon .ant-input-search-button:not(.ant-btn-primary), .ant-input-search.ant-form-search .ant-input:hover + .ant-input-group-addon .ant-input-search-button:not(.ant-btn-primary), .ant-input-search .ant-input:focus + .ant-input-group-addon .ant-input-search-button:not(.ant-btn-primary){
+  border-color: transparent;
+  border-left-color:transparent;
+}
+.ant-form-search {
+  .ant-input:hover {
+    border-color: $color__yellow;
+  }
+
+  .ant-input-group > .ant-input:first-child,
+  .ant-input-group-addon:first-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-radius: 20px;
+  }
+
+  input.ant-input {
+    background: transparent;
+    border: 2px solid $color__yellow;
+    padding: 0 20px;
+    height: 40px;
+    color: white;
+    @include no-boxshadow();
+  }
+
+  span.ant-input-group-addon {
+    background: transparent;
+  }
+
+  button.ant-btn, button.ant-btn.ant-btn-primary.ant-input-search-button {
+    background-color: transparent;
+    border-color: transparent;
+    color: $color__yellow;
+    margin-left: -55px;
+  }
+  .ant-input-search > .ant-input-group > .ant-input-group-addon:last-child .ant-input-search-button:not(.ant-btn-primary){
+    color: $color__yellow;
+  }
+  .ant-input-search > .ant-input-group > .ant-input-group-addon:last-child .ant-input-search-button, .ant-input-search .ant-input:hover, .ant-input-search .ant-input:focus{
+    @include no-outline($color__yellow);
+  }
+  span.anticon.anticon-search {
+    font-size: 1.4rem;
+    color: $color__yellow;
+
+  }
+}

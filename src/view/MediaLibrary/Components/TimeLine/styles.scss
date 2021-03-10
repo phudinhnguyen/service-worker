@@ -1,0 +1,128 @@
+@import "styles/variable";
+$spaceTimeLineYear: 34px;
+$spaceTimeLineYearPaddingBottom: 34px + 16px;
+
+$fontsizeText: 15px;
+
+.timeline-component {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &:hover {
+    &::-webkit-scrollbar {
+      display: initial;
+      transition: ease-in-out display 0.3s;
+    }
+  }
+  transition: all ease-in-out 0.2s;
+  height: 80vh;
+  overflow: auto;
+  position: fixed;
+  top: 10vh;
+  width: 10rem;
+
+  .ant-timeline {
+    flex-direction: column;
+    justify-content: flex-start;
+    display: flex;
+  }
+  .ant-timeline-item {
+    transition: all 0.2s ease-in-out;
+    color: $color__yellow;
+    &.active {
+      // font-size: 16px;
+      font-weight: bold;
+      color: $color__yellow;
+      // .dot-year{
+      //     height: 8px;
+      //     width: 8px;
+      // }
+      // .ant-timeline-item-head{
+      //     padding: 4px 0px;
+      // }
+    }
+    padding-bottom: $spaceTimeLineYear + 10px;
+    .ant-timeline-item-label {
+      font-size: $fontsizeText;
+    }
+  }
+  .ant-timeline-item-tail {
+    border-left: 1px solid $color__yellow;
+    height: 100%;
+  }
+
+  .ant-timeline-item-head {
+    background-color: $color--background;
+  }
+
+  .dot-year {
+    cursor: pointer;
+    background-color: $color__yellow;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+  }
+
+  .content-timeline-month {
+    // padding: 5px 0;
+
+    &.show-timeline {
+      display: block;
+      transition: visibility 0.2s ease, max-height 0.2s ease-in-out;
+      max-height: 100em;
+      /* magic number for max-height = enough height */
+      visibility: visible;
+      transition-delay: 0s;
+    }
+    &.collapse-timeline {
+      overflow: hidden;
+      display: block;
+      max-height: 0;
+      // overflow: hidden;
+      transition: visibility 0.1s ease, max-height 0.1s ease-in-out,
+        padding 0.1s ease;
+      // transition-delay: 0.3s, 0s, 0s;
+      padding: 0;
+    }
+    & > .ant-timeline-item {
+      .ant-timeline-item-label {
+        cursor: pointer;
+        font-size: $fontsizeText - 1px;
+        .active {
+          font-weight: 600;
+        }
+      }
+      .ant-timeline-item-head {
+        cursor: pointer;
+        color: $color__yellow;
+        font-size: $fontsizeText;
+      }
+    }
+    .ant-timeline-item-head.ant-timeline-item-head-custom.ant-timeline-item-head-blue {
+      padding: 0;
+    }
+    .custom-label {
+      align-items: center;
+      justify-content: flex-end;
+      display: flex;
+      position: relative;
+      span {
+        margin-right: 5px;
+      }
+      .divider-horizontal {
+        height: 1px;
+        width: 3px;
+        background: $color__yellow;
+        content: "";
+        position: absolute;
+        right: 3px - $fontsizeText;
+        top: 50%;
+      }
+    }
+  }
+
+  // .custom-dot-child{
+  //     border-left: 1px solid $color__yellow;
+  //     content: "";
+  // }
+}

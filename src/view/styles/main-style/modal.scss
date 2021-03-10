@@ -1,0 +1,40 @@
+@use "variable";
+.main-modal {
+  .ant-modal-content{
+    border-radius: $border-radius;
+
+  }
+  .ant-modal-header {
+    padding: 14px 46px;
+    color: white;
+    background: $color__yellow;
+    border-bottom: none;
+    border-radius: $border-radius $border-radius 0 0;
+    .ant-modal-title {
+      color: white;
+      font-weight: bold;
+      font-size: 1.6em;
+    }
+  }
+  .ant-modal-close{
+    color: white;
+  }
+  .ant-modal-close-x {
+    width: 75px;
+    line-height: 46px;
+  }
+  .ant-modal-body{
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-left: 40px;
+  }
+  .ant-modal-content {
+    background-color: $color--card;
+  }
+  .ant-modal-footer {
+    padding-bottom: 60px;
+    padding-right: 30px;
+    border-top: none;
+    border-radius: 0 0 $border-radius $border-radius;
+  }
+}

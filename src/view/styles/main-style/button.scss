@@ -1,0 +1,26 @@
+@use "variable";
+button.ant-btn.normal-button, button.ant-btn.cancel-button, button.ant-btn.icon-button, .ant-modal-confirm-btns button.ant-btn {
+  height: 40px;
+  min-width: 140px;
+  border-radius: 40px;
+  padding-right: 17px;
+  padding-left: 17px;
+  background-color: $color__yellow;
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: .2s;
+  &:hover{
+    opacity: .8;
+  }
+}
+
+button.ant-btn.cancel-button, .ant-modal-confirm-btns button.ant-btn.ant-btn-dangerous{
+  background-color: $color-background-cancel;
+}
+.icon-button{
+  i{
+    margin-right: 10px;
+  }
+}

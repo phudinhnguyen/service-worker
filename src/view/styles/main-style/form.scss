@@ -1,0 +1,201 @@
+@use "variable";
+
+.main-form {
+  //input
+  .ant-input-focused {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid $color__yellow__second;
+  }
+  .ant-input {
+    background-color: transparent;
+    border-radius: 5px;
+    height: 40px;
+    color: white;
+    padding: 4px 20px;
+    border-color: white;
+    @include no-outline($color__yellow__second);
+  }
+  .ant-form-item, .ant-input{
+    font-size: 16px;
+  }
+  .ant-select-arrow,
+  .ant-form-item-label > label,
+  .ant-select,
+  .ant-select-clear {
+    color: white;
+  }
+  .ant-form-item-label > label {
+    font-weight: bold;
+    font-size: 1.15rem;
+  }
+  .ant-form-item-label
+    > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+    display: none;
+  }
+  .ant-form-item-label
+    > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::after {
+    display: inline-block;
+    margin-right: 4px;
+    margin-left: 4px;
+    color: white;
+    font-size: 14px;
+    font-family: SimSun, sans-serif;
+    line-height: 1;
+    content: "*";
+  }
+  .ant-select{
+    font-size: 16px;
+  }
+  .ant-select-single:not(.ant-select-customize-input) .ant-select-selector,
+  .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    height: 40px;
+    border-radius: 5px;
+    padding: 5px 20px;
+  }
+  .ant-form-item-has-error
+    .ant-select:not(.ant-select-disabled):not(.ant-select-customize-input)
+    .ant-select-selector {
+    background-color: transparent;
+  }
+  .ant-select-clear,
+  .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    background-color: transparent;
+  }
+  .ant-select:not(.ant-select-disabled):hover .ant-select-selector,
+  .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input)
+    .ant-select-selector {
+    border-color: $color__yellow__second;
+    @include no-outline($color__yellow__second);
+  }
+  .ant-form-item-has-error .ant-input,
+  .ant-form-item-has-error .ant-input:hover {
+    background-color: transparent;
+  }
+}
+//password
+.ant-input-affix-wrapper {
+  padding: 0 11px;
+  background-color: transparent;
+  border-radius: 5px;
+  @include no-outline($color__yellow__second);
+  .ant-input:hover {
+    border: none;
+  }
+  .ant-input-password-icon {
+    color: white;
+  }
+  .ant-input-focused {
+    border: 1px solid $color__yellow__second;
+    outline: none;
+    box-shadow: none;
+  }
+}
+.ant-input-affix-wrapper > input.ant-input:focus {
+  border: none;
+}
+//SELECT DROPDOWN
+.ant-select-dropdown {
+  border-radius: 5px;
+  background-color: $color-select;
+  .ant-select-item.ant-select-item-option {
+    color: $color-background-cancel;
+  }
+
+  .ant-select-item.ant-select-item-option.ant-select-item-option-active {
+    color: white;
+  }
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    background-color: $color-select-active;
+    font-weight: normal;
+  }
+  .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+    background-color: $color-select-active;
+  }
+}
+
+//input date and time picker
+.ant-picker {
+  color: white;
+  padding: 8px 11px;
+  background: transparent;
+  border: 1px solid $color--main-text;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+}
+.ant-picker:hover,
+.ant-picker-focused {
+  border-color: $color__yellow__second;
+}
+.ant-picker-suffix,
+.ant-picker-input > input {
+  color: white;
+}
+.ant-picker-input > input{
+  font-size: 16px;
+}
+.ant-picker-input > input:hover {
+  border-color: $color__yellow__second;
+}
+
+//date time picker
+.ant-picker-cell {
+  color: rgba(255, 255, 255, 0.377);
+}
+.ant-picker-dropdown,
+.ant-picker-header button,
+.ant-picker-content th,
+.ant-picker-cell-in-view,
+.ant-picker-time-panel-column
+  > li.ant-picker-time-panel-cell
+  .ant-picker-time-panel-cell-inner {
+  color: white;
+}
+.ant-picker-cell:hover:not(.ant-picker-cell-in-view) .ant-picker-cell-inner,
+.ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-range-hover-start):not(.ant-picker-cell-range-hover-end)
+  .ant-picker-cell-inner {
+  background-color: $color__yellow;
+}
+.ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+  border: 1px solid white;
+}
+.ant-picker-content th {
+  font-weight: 600;
+}
+.ant-picker-panel-container {
+  background-color: $color--card;
+  border-radius: $border-radius;
+}
+.ant-picker-header {
+  background-color: $color__yellow;
+  color: white;
+}
+.ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {
+  background-color: $color__yellow;
+}
+.ant-picker-header-view button:hover {
+  color: white;
+  opacity: 0.7;
+}
+.ant-picker-time-panel-column
+  > li.ant-picker-time-panel-cell-selected
+  .ant-picker-time-panel-cell-inner {
+  background-color: $color--menu-hover;
+}
+button.ant-btn.ant-btn-primary.ant-btn-sm {
+  color: $color__yellow;
+  background: transparent;
+  border-color: $color__yellow;
+}
+button.ant-btn.ant-btn-primary.ant-btn-sm:hover {
+  background: $color__yellow;
+  color: white;
+}
+.ant-picker-time-panel-column
+  > li.ant-picker-time-panel-cell
+  .ant-picker-time-panel-cell-inner:hover {
+  background-color: $color__yellow;
+}

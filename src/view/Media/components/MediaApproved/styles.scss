@@ -1,0 +1,24 @@
+@import "../../../styles/_variable.scss";
+$color-theme : #3B3E55;
+.card-media-approved{
+    width: auto;
+    height: auto; 
+    background: $color-theme;
+    border-radius: 10px;
+    padding: 0 1rem;
+    
+    .title-media{
+        border-bottom: 2px solid $color__yellow;
+        padding: 0.5rem;
+        .ant-typography{
+            color: #fff;
+        }
+        margin-bottom: 15px;
+    }
+   
+
+    .content-media{
+        height: 100%;
+        overflow:auto;
+    }
+}

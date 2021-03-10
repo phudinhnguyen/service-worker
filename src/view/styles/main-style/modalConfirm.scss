@@ -1,0 +1,28 @@
+@use "variable";
+.ant-modal-content {
+  background-color: $color--card;
+  border-radius: 10px;
+}
+.ant-modal-confirm .ant-modal-body{
+  padding: 0;
+}
+
+span.anticon.anticon-exclamation-circle {
+  display: none;
+}
+
+span.ant-modal-confirm-title {
+  padding: 14px 46px;
+  background-color: $color__yellow;
+  border-radius: 10px 10px 0 0;
+  font-size: 1.6rem;
+}
+.ant-modal-confirm-body .ant-modal-confirm-title, .ant-modal-confirm-body .ant-modal-confirm-content{
+  color: white;
+}
+.ant-modal-confirm-body > .anticon + .ant-modal-confirm-title + .ant-modal-confirm-content {
+  margin-left: 46px;
+  margin-top: 38px;
+}
+
+.ant-modal-confirm .ant-modal-confirm-btns {margin: 60px 46px;}

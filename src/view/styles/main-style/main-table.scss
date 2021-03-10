@@ -1,0 +1,192 @@
+@use "variable";
+
+.active.Showing {
+  display: block;
+  width: fit-content;
+  font-weight: bold;
+  font-size: 16px;
+}
+.Showing {
+  display: none;
+}
+.table-function {
+  margin-top: -48px;
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+//FIX SELECTION
+.pagesize {
+  width: fit-content;
+  &--entries {
+    margin-left: 8px;
+    font-size: 16px;
+  }
+  &--select {
+    width: fit-content;
+  }
+  .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input)
+    .ant-select-selector {
+    border-color: white;
+  }
+  .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    position: relative;
+    color: white;
+    background-color: transparent;
+    border: 1px solid #f6f6f6;
+    border-radius: 5px;
+  }
+  .ant-select-arrow {
+    color: white;
+  }
+}
+
+.main-table {
+  //FIX PAGINATION
+  .ant-table-pagination.ant-pagination {
+    margin-top: 23px;
+  }
+  .ant-pagination-item,
+  .ant-pagination-item a {
+    background-color: transparent;
+    border: none;
+    color: white;
+  }
+  .ant-pagination-item a {
+    padding: 0;
+  }
+
+  .ant-pagination-item {
+    margin-right: 0px;
+    min-width: 20px;
+  }
+  .ant-pagination-jump-prev
+    .ant-pagination-item-container
+    .ant-pagination-item-ellipsis,
+  .ant-pagination-jump-next
+    .ant-pagination-item-container
+    .ant-pagination-item-ellipsis {
+    color: white;
+  }
+
+  .ant-pagination-prev .ant-pagination-item-link,
+  .ant-pagination-next .ant-pagination-item-link {
+    background-color: transparent;
+    border: none;
+    color: white;
+  }
+
+  .ant-pagination-options {
+    display: none;
+  }
+
+  .ant-pagination-jump-prev
+    .ant-pagination-item-container
+    .ant-pagination-item-link-icon,
+  .ant-pagination-jump-next
+    .ant-pagination-item-container
+    .ant-pagination-item-link-icon {
+    color: $color__yellow;
+  }
+
+  .ant-pagination-item {
+    font-family: $main-font;
+  }
+  .ant-pagination-item.ant-pagination-item-active,
+  .ant-pagination-item.ant-pagination-item-active a,
+  .ant-pagination-item.ant-pagination-item-active
+    a:not([href]):not([tabindex]):focus,
+  .ant-pagination-item.ant-pagination-item-active
+    a:not([href]):not([tabindex]):hover {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: $color__yellow__second;
+  }
+
+  //FIX MAIN CSS IN TABLE
+  .ant-table {
+    background-color: $color--card;
+    color: white;
+    font-size: 16px;
+  }
+  .ant-table-thead > tr > th {
+    background: $color__yellow;
+    color: white;
+    font-weight: bold;
+    border-bottom: none;
+  }
+  .ant-table-tbody > tr.ant-table-row:hover > td {
+    transition: 0.2s;
+  }
+  .ant-table-tbody > tr.ant-table-row:hover > td {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  .ant-table-tbody > tr:last-child > td {
+    border-bottom: none;
+  }
+  .ant-table-row:nth-child(2n) {
+    background: $color-table;
+  }
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td {
+    position: relative;
+    padding: 16px 0px 16px 35px;
+  }
+  .ant-table-thead {
+    .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+    .ant-checkbox:hover .ant-checkbox-inner,
+    .ant-checkbox-input:focus + .ant-checkbox-inner {
+      border-color: white;
+      color: white;
+    }
+    .ant-checkbox-indeterminate .ant-checkbox-inner {
+      background-color: transparent;
+    }
+    .ant-checkbox-indeterminate .ant-checkbox-inner::after {
+      background-color: white;
+    }
+  }
+  .ant-table,
+  .main-table
+    .ant-table-container
+    table
+    > thead
+    > tr:first-child
+    th:first-child,
+  .ant-table-container table > thead > tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+  }
+  .ant-table,
+  .main-table .ant-table-thead > tr > th,
+  .ant-table-container table > thead > tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+  }
+
+  //FIX MY CSS
+  .main-column {
+    color: $color__yellow;
+    font-weight: bold;
+  }
+  th.ant-table-cell.main-column {
+    font-size: 1.15em;
+  }
+
+  //CHECKBOX
+  .ant-table-tbody > tr.ant-table-row-selected > td {
+    background: initial;
+    border-color: white;
+  }
+}
+span.ant-spin-dot.ant-spin-dot-spin {
+  color: $color__yellow;
+}
+
+.ant-spin.ant-spin-spinning {
+  color: $color__yellow;
+}
+
+i.ant-spin-dot-item {
+  color: $color__yellow;
+  background: $color__yellow;
+}

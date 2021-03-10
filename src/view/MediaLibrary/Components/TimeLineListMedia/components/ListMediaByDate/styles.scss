@@ -1,0 +1,12 @@
+@import "styles/variable.scss";
+.listMediaByDate{
+   &  h5.ant-typography.date{
+        color:$color__yellow__second;
+        margin-bottom: 0.8rem;
+    }
+    .lengthVideo{
+        font-size: 0.93rem;
+        color:$color__yellow__second;
+    }
+    
+}

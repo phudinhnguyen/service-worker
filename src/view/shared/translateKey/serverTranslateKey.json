@@ -1,0 +1,26 @@
+{
+  "Action": {
+    "USA": "Action",
+    "VNM": "Hành động"
+  },
+  "open": {
+    "USA": "Open",
+    "VNM": "Mở"
+  },
+  "message": {
+    "USA": "Message",
+    "VNM": "Thông báo"
+  },
+  "success": {
+    "USA": "Success",
+    "VNM": "Thành công"
+  },
+  "reject": {
+    "USA": "Reject",
+    "VNM": "Từ chối"
+  },
+  "Yes": {
+    "USA": "Yeser",
+    "VNM": "Có"
+  }
+}

@@ -1,0 +1,44 @@
+@import "styles/_variable.scss";
+.transform {
+  margin-top: 50px;
+}
+.title-transform {
+  color: $color__yellow;
+  font-weight: 600;
+  font-size: 1.25em;
+  &-item {
+    display: flex;
+  }
+  &-children {
+    font-weight: 600;
+    font-size: 1em;
+    margin-bottom: 19px;
+  }
+}
+.input-transform {
+  color: #afaeae;
+  background: transparent;
+  border-radius: 5px;
+  width: 115px;
+  border: 1px solid #afaeae;
+  font-size: 14px;
+  text-align: center;
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+.title-properties {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.block-transform {
+  margin-right: 135px;
+}
+
+.properties-transform-item {
+  margin-right: 35px;
+}

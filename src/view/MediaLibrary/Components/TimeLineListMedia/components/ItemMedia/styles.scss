@@ -1,0 +1,66 @@
+
+.itemMediaList{
+    width: 100%;
+        position: relative;
+    height: 0;
+    padding-bottom: 100%;
+    img , video , audio {
+        width: 100%;
+        border-radius: 0.67rem;
+        object-fit: cover;
+        /* height: 100%; */
+        position: absolute;
+        /* z-index: 1; */
+        top: 0;
+        height: 100%;
+    }
+    .content-item{
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        height: 32%;
+        width: 100%;
+        z-index: 1;
+       .dropBackground{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        background: #5E5B6A;
+        opacity: 0.5;
+        width: 100%;
+        border-bottom-left-radius:  0.67rem;
+        border-bottom-right-radius:  0.67rem;
+       }
+       .text{
+        padding:0.2rem 0.4rem ;
+        z-index: 2;
+        background: transparent;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+            .title , .description{
+                color: #fff;
+                display: inline;
+                font-size: 0.9rem;
+                white-space: nowrap;
+                overflow:hidden;
+                text-overflow: ellipsis;
+                width: 100%;
+            }
+            .title{
+                font-weight: bold;
+            }
+       }
+        
+    }
+    .action{
+        display: inline-flex;
+        position: absolute;
+        right: 0;
+        z-index: 2;
+        .ant-btn{
+            padding: 10px 0;
+        }
+    }
+}

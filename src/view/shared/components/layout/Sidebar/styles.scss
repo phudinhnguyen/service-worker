@@ -1,0 +1,126 @@
+@import "./../../../../styles/variable";
+@import "./../Header/styles.scss";
+a:hover {
+  opacity: 1;
+}
+.logo {
+  margin-top: $margin-top-body + 3;
+  margin-bottom: 24px;
+  &--content {
+    font-family: $logo-font;
+    font-size: 40px;
+    margin-left: 10px;
+    line-height: normal;
+  }
+}
+.menu {
+  width: 110px;
+  background-color: $color--card;
+  border-radius: 0 10px 10px 0;
+
+  &--component {
+    border-radius: 0 0 10px 0;
+
+    
+    &--item {
+      .item-label {
+        height: 70px;
+        display: block;
+        position: relative;
+      }
+
+      .item {
+        &__icon {
+          position: absolute;
+          top: 50%;
+          color: $color--menu-icon;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          font-size: 1.5rem;
+          line-height: 0; 
+        img {
+          filter: contrast(0.1) ;
+        }
+        }
+      }
+    }
+  }
+  .menu-active {
+    background-color: $color--menu-hover;
+  }
+
+  .item-label .item-hover, .menu-active .item-label .item-hover {
+    img {
+      padding: 5px;
+      background: red;
+      border-radius: 50%;
+      position: relative;
+      width: 40px;
+      height: 40px;
+      background-color: #ff7506;
+      font-size: 1.5rem;
+      left: 4px;
+      opacity: 1;
+      border-radius: 40px;
+      filter: contrast(1) ;
+      object-fit: scale-down;
+    }
+    opacity: 0;
+    background-color: $color--card;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 160px;
+    border: 1px solid $color__yellow;
+    border-radius: 100px;
+    transition: .3s ease;
+    &__icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      line-height: 0;
+      .anticon {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background-color: $color__yellow;
+        font-size: 1.5rem;
+        left: 4px;
+        opacity: 1;
+        border-radius: 40px;
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    .item__nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 54px;
+      font-size: 0.9em;
+    }
+  }
+  .menu-active .item-label .item-hover{
+    opacity: 1;
+  }
+  .item-label:hover .item-hover {
+    opacity: 1;
+  }
+  .menu--decoration {
+    &--top {
+      height: 10px;
+      border-radius: 0 10px 0 0;
+      background-color: $color__yellow;
+    }
+    &--bottom {
+      height: 10px;
+      border-radius: 0 0 10px 0;
+    }
+  }
+}

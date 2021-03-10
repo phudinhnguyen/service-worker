@@ -1,0 +1,96 @@
+@use "variable";
+//===============Checkbox==================
+
+.ant-checkbox-inner {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border-radius: 4px;
+  border-width: 2px;
+  @include no-boxshadow();
+  &::after {
+    left: 26%;
+    width: 7px;
+  }
+}
+.ant-checkbox-checked {
+  .ant-checkbox-inner {
+    background-color: transparent ;
+    border: 2px solid white ;
+  }
+
+  &:hover {
+    .ant-checkbox-checked::after {
+      border: none ;
+    }
+  }
+
+  &::after {
+    border: none ;
+  }
+}
+
+.ant-checkbox-wrapper:hover .ant-checkbox-inner,
+.ant-checkbox:hover .ant-checkbox-inner,
+.ant-checkbox-input:focus + .ant-checkbox-inner {
+  border-color: $color__yellow ;
+  color: white ;
+}
+.ant-checkbox-checked .ant-checkbox-inner {border-width: 2px;}
+
+.ant-checkbox-inner::after {
+    top: 46%;
+    height: 12px;
+}
+//====================RADIO===================
+.ant-radio {
+  // top: 3px;
+  @include no-boxshadow();
+  border:none;
+  
+}
+.ant-radio-inner {
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  border-width: 2px;
+  @include no-boxshadow();
+  &::after {
+    top: 10%;
+    left: 29%;
+    width: 7px;
+    height: 14px;
+    border: 1px solid white;
+    background-color: transparent;
+  }
+}
+.ant-radio-inner::after{
+  border-radius: 0;
+}
+.ant-radio-checked .ant-radio-inner::after {
+  transform: rotate(45deg);
+  display: table;
+  border: 2px solid #fff;
+  border-top: 0;
+  border-left: 0;
+}
+.ant-radio-checked .ant-radio-inner {
+  border-color: white;
+}
+.ant-radio-wrapper:hover .ant-radio,
+.ant-radio:hover .ant-radio-inner,
+.ant-radio-input:focus + .ant-radio-inner {
+  border-color: $color__yellow ;
+}
+
+// for both radio and checkbox 
+.ant-radio-wrapper, .ant-checkbox-wrapper{
+  color: white;
+}
+span.ant-radio + *, .ant-checkbox + span{
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.ant-form label{
+  font-size: 15px;
+}

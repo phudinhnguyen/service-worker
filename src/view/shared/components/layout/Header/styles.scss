@@ -1,0 +1,59 @@
+@import "./../../../../styles/variable";
+
+$margin: 20px;
+$margin-top-body: 27px;
+@mixin icon-size() {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+}
+.header-component {
+  margin-right: 170px;
+  margin-top: 27px;
+  float: right;
+  display: flex;
+  align-items: center;
+  &__language {
+    margin-right: $margin;
+  }
+  &__identify {
+    text-align: right;
+    color: $color--header-text;
+    .identify__hi{
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .identify__admin{
+      font-size: 0.95rem;
+      font-weight: bold;
+    }
+  }
+  &__dropdown-avatar {
+    border: 1px solid $color--main-text;
+    @include icon-size();
+    position: relative;
+    margin-left: $margin;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+.icon {
+  &__language {
+    @include icon-size();
+    position: relative;
+    font-size: 1.5rem;
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__avatar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

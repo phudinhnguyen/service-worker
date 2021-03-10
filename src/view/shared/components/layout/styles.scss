@@ -1,0 +1,25 @@
+@import "./../../../styles/variable";
+
+div#root {
+  border: 1px solid black;
+  height: 100%;
+}
+
+.all-page-component {
+  display: flex;
+  height: 100%;
+}
+
+.sider-component {
+  width: 200px;
+}
+
+.right-page-component {
+  width: 100%;
+  overflow-y: auto;
+}
+
+.main-component {
+  padding: 30px 170px 0 50px;
+  min-height: 99vh;
+}

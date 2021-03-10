@@ -1,0 +1,56 @@
+@use "variable";
+
+@font-face {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: local("Segoe UI Bold"), local("SegoeUI-Bold"),
+    url("../shared/assets/font/FontsFree-Net-Segoe-UI-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"),
+    url("../shared/assets/font/Open_Sans/OpenSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"),
+    url("../shared/assets/font/Open_Sans/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"),
+    url("../shared/assets/font/Open_Sans/OpenSans-SemiBold.ttf") format("truetype");
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  font-weight: normal;
+  color: $color--main-text;
+  background-color: $color--background;
+  font-family: 'Open Sans', 'Times New Roman', Times, serif;
+}
+
+a, a:hover{
+  text-decoration: none;
+  color: $color--main-text;
+  transition: .2s;
+}
+.color-yellow{
+  color: $color__yellow !important;
+}

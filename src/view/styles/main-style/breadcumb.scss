@@ -1,0 +1,32 @@
+@use "variable";
+
+//======Breadcumb=========
+.breadcb {
+  display: flex;
+  align-items: baseline;
+  margin: 10px 0;
+
+  a {
+    color: $color-breadcumb-text;
+  }
+
+  &__li {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  &__li:first-child {
+    padding-left: 0;
+  }
+
+  &__last {
+    font-weight: bold;
+  }
+
+  &__icon {
+    .anticon svg {
+      margin-bottom: 7px;
+      color: $color-breadcumb-text;
+    }
+  }
+}

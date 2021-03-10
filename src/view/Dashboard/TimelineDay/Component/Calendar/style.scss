@@ -1,0 +1,119 @@
+.device-calendar {
+    width: 80%;
+    position: relative;
+
+    .device-row:last-child {
+        border-bottom: none !important;
+    }
+
+    .device-row {
+        border-bottom: 1px solid rgb(92, 92, 92);
+        height: 71px;
+
+        &:last-child {
+            border-bottom: none !important;
+        }
+
+        .day {
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+            border-right: 1px solid rgb(92, 92, 92);
+            background-color: #3B3E55;
+            cursor: pointer;
+
+            &:hover {
+                opacity: .8;
+            }
+
+            &:last-child {
+                border-right: none;
+            }
+        }
+
+        .active-day {
+            width: 100%;
+            height: 100%;
+            background-color: #00B2CA;
+        }
+
+        .start-day {
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+
+        .end-day {
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        .border-00B2CA {
+            border-color: #00B2CA !important;
+        }
+    }
+
+    .playlists-in-device {
+        border-radius: 7px;
+        width: 260px;
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        .device-title {
+            font-weight: bold;
+            color: #fff;
+            background-color: #FF7506;
+            align-items: center;
+            padding: 5px 15px;
+            display: flex;
+            justify-content: space-between;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        }
+
+        .playlist-list {
+            max-height: 200px;
+            overflow-y: auto;
+            margin-right: -6px;
+
+            .wrap-playlist-item {
+                background-color: #5E5B6A;
+                color: rgb(189, 189, 189);
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #716e80;
+                    color: #fff;
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                    border-bottom-left-radius: 7px;
+                    border-bottom-right-radius: 7px;
+
+                    .playlist-item {
+                        border-bottom: none !important;
+                    }
+                }
+
+                .playlist-item {
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 1px dashed #fff;
+                    font-size: 14px;
+                    margin: 0 10px;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+
+    .calender-loading {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+}
